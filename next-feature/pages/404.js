@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import NavBar from '../Components/Navbar/NavBar'
 
-const index = () => {
+const Index = () => {
     const router = useRouter()
     useEffect(() => {
         setTimeout(() => {
@@ -23,4 +23,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Index

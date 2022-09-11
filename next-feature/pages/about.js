@@ -8,7 +8,7 @@ const About = () => {
             <NavBar />
             <div>about</div>
             <div style={{display:'flex', justifyContent:"center"}}>
-            <Image src="/cloth.jpg" width="500" height="300"/>
+            <Image src="/cloth.jpg" width="500" height="300" alt={"cloths"}/>
             </div>
         </>
     )
