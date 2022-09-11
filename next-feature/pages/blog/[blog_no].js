@@ -28,7 +28,7 @@ export const getStaticProps = async(context) => {
 }
 
 
-const blog = ({data}) => {
+const Blog = ({data}) => {
   const router = useRouter()
   const page = router.query.blog_no
 
@@ -40,4 +40,4 @@ const blog = ({data}) => {
   )
 }
 
-export default blog
+export default Blog

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const newPlan = () => {
+const NewPlan = () => {
   const router = useRouter()
   const page = router.query.newPlan
 
@@ -10,4 +10,4 @@ const newPlan = () => {
   )
 }
 
-export default newPlan
+export default NewPlan

@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../Components/Navbar/NavBar'
 import Image from 'next/image'
 
-const about = () => {
+const About = () => {
     return (
         <>
             <NavBar />
@@ -14,4 +14,4 @@ const about = () => {
     )
 }
 
-export default about
+export default About
