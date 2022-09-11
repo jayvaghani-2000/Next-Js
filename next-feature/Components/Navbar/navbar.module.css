@@ -1,0 +1,6 @@
+.menuBar {
+    display: flex;
+    column-gap: 50px;
+    list-style-type: none;
+}
+
