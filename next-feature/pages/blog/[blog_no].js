@@ -3,16 +3,16 @@ import { useRouter } from 'next/router'
 import NavBar from '../../Components/Navbar/NavBar'
 
 export const getStaticPaths = async() => {
-    const res = await  fetch(`https://jsonplaceholder.typicode.com/posts`);
-    const data = await res.json()
-    const paths = data.map((i) => {
-        return {
-            params: { blog_no : i.id.toString() }
-        }
-    })
+    // const res = await  fetch(`https://jsonplaceholder.typicode.com/posts`);
+    // const data = await res.json()
+    // const paths = data.map((i) => {
+    //     return {
+    //         params: { blog_no : i.id.toString() }
+    //     }
+    // })
     return {
-        paths,
-        fallback: false
+        paths: [{params :{ blog_no : "1"}},{params:{ blog_no : "2"}},{params:{ blog_no : "3"}}], 
+        fallback: true
     }
 }
 
@@ -30,7 +30,9 @@ export const getStaticProps = async(context) => {
 
 const Blog = ({data}) => {
   const router = useRouter()
-  const page = router.query.blog_no
+    if(router.isFallback){
+        return <h1>Loading ...</h1>
+    }
 
   return (
     <>
