@@ -19,7 +19,7 @@ const NavBar = () => {
                     <Link href="/about">About</Link>
                 </li>
                 <li>
-                    <Link href="/pricing">Pricing</Link>
+                    <Link href="/news">Pricing</Link>
                 </li>
             </ul>
             {/* <style jsx>

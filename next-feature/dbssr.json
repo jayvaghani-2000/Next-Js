@@ -1,0 +1,36 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "jsonaaaaaaa-server",
+            "author": "typicode"
+        }, 
+        {
+            "id": 2,
+            "title": "ttsssaaassss",
+            "author": "jay"
+        },
+        {
+            "id": 3,
+            "title": "three",
+            "author": "Vaghani"
+        }
+    ], 
+    "news": [
+        {
+            "id": 1,
+            "title": "news1",
+            "author": "aaaaaaaaaaaaa"
+        }, 
+        {
+            "id": 2,
+            "title": "news2",
+            "author": "bbbbbbbbbbbbb"
+        },
+        {
+            "id": 3,
+            "title": "news3",
+            "author": "cccccccccccccc"
+        }
+    ]
+}
