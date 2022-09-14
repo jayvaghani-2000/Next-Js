@@ -1,0 +1,19 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "jsonaaaaaaa-server",
+            "author": "typicode"
+        }, 
+        {
+            "id": 2,
+            "title": "ttsssaaassss",
+            "author": "jay"
+        },
+        {
+            "id": 3,
+            "title": "three",
+            "author": "Vaghani"
+        }
+    ]
+}

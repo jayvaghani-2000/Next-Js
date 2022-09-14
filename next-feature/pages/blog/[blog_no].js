@@ -10,34 +10,39 @@ export const getStaticPaths = async() => {
     //         params: { blog_no : i.id.toString() }
     //     }
     // })
+    // return {
+    //     paths: [{params :{ blog_no : "1"}},{params:{ blog_no : "2"}},{params:{ blog_no : "3"}}], 
+    //     fallback: true
+    // }
+    const res = await  fetch(`http://localhost:4000/posts`);
+    const data = await res.json()
+    const paths =  data.map(a => ({params:{blog_no:a.id.toString()}}))
     return {
-        paths: [{params :{ blog_no : "1"}},{params:{ blog_no : "2"}},{params:{ blog_no : "3"}}], 
-        fallback: true
+            paths,
+            fallback: "blocking"
     }
 }
 
 export const getStaticProps = async(context) => {
     const id = context.params.blog_no
-    const res = await  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    // const res = await  fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    const res = await  fetch(`http://localhost:4000/posts/${id}`);
     const data = await res.json()
     return {
         props: {
-            data:data
-        }
+            data:data,
+        },
+        revalidate: 10
     }
 }
 
 
 const Blog = ({data}) => {
-  const router = useRouter()
-    if(router.isFallback){
-        return <h1>Loading ...</h1>
-    }
-
+    
   return (
     <>
         <NavBar />
-        <div>{data.title}</div>
+        <div>{data.author}</div>
     </>
   )
 }
